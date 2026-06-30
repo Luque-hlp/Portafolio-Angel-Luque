@@ -280,3 +280,34 @@
   font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--warm-gray); margin-bottom: 8px;
 }
+
+/* Campos tipo "líneas de cuaderno" — sin caja, solo línea inferior */
+.form-in, .form-ta {
+  width: 100%;
+  padding: 9px 2px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184,133,32,0.28);
+  font-family: 'Lora', serif;
+  font-size: 14px; color: var(--text);
+  outline: none; border-radius: 0;
+  transition: border-color 0.45s var(--ease);
+}
+.form-in:focus, .form-ta:focus { border-color: var(--gold); }
+.form-ta { height: 110px; resize: vertical; }
+ 
+.btn-submit { width: 100%; justify-content: center; }
+ 
+@media (max-width: 900px) {
+  .about-grid   { grid-template-columns: 1fr; gap: 54px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+  .polaroid { margin: 0 auto; }
+}
+ 
+@media (max-width: 768px) {
+  .section { padding: 90px 6% 90px; min-height: auto; }
+  .s-inner { padding-right: 0; }
+  .skills-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+  #about::before { display: none; }
+  #skills::before { display: none; }
+}
