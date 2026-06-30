@@ -1,0 +1,106 @@
+/* ============================================
+   PROYECTOS — páginas de hojas pegadas
+============================================ */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+}
+ 
+.proj-card {
+  background: #faf6ee;
+  overflow: visible;
+  position: relative;
+  transform: rotate(-0.7deg);
+  box-shadow:
+    5px 9px 30px rgba(42,36,24,0.15),
+    2px 3px 10px rgba(42,36,24,0.08),
+    0 0 0 1px rgba(200,180,140,0.12);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+ 
+.proj-card:nth-child(2) { transform: rotate(0.55deg); }
+.proj-card:nth-child(3) { transform: rotate(-0.35deg); }
+ 
+.proj-card::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%) rotate(-1.2deg);
+  width: 58px; height: 20px;
+  background: rgba(212,190,130,0.46);
+  border: 1px solid rgba(190,165,100,0.26);
+  z-index: 10;
+}
+ 
+.proj-card-cap {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 10px;
+  color: rgba(255,238,190,0.65);
+  z-index: 5;
+  letter-spacing: 0.18em;
+}
+ 
+.proj-card:hover {
+  transform: rotate(0deg) translateY(-10px);
+  box-shadow:
+    8px 26px 56px rgba(42,36,24,0.18),
+    4px 8px 20px rgba(42,36,24,0.1);
+}
+ 
+.proj-img { height: 186px; overflow: hidden; position: relative; }
+ 
+.proj-img-inner { width: 100%; height: 100%; transition: transform 0.8s var(--ease); }
+.proj-card:hover .proj-img-inner { transform: scale(1.04); }
+ 
+.proj-body {
+  padding: 24px 22px 20px;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px, transparent 29px,
+    rgba(184,133,32,0.055) 29px, rgba(184,133,32,0.055) 30px
+  );
+}
+ 
+.proj-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24px; color: var(--ink); margin-bottom: 10px; font-weight: 400;
+}
+ 
+.proj-desc {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 13px; color: var(--text-light); line-height: 1.88; margin-bottom: 18px;
+}
+ 
+.proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 20px; }
+ 
+.ptag {
+  font-family: 'Manrope', sans-serif;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid rgba(122,92,56,0.2);
+  color: var(--brown);
+  background: rgba(184,133,32,0.04);
+}
+ 
+.proj-links { display: flex; gap: 20px; }
+ 
+.plink {
+  font-family: 'Manrope', sans-serif;
+  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none; color: var(--wood);
+  display: inline-flex; align-items: center; gap: 5px;
+  border-bottom: 1px solid rgba(90,56,32,0.18);
+  padding-bottom: 1px;
+  transition: color 0.35s, border-color 0.35s;
+}
+.plink:hover { color: var(--gold); border-color: var(--gold); }
+ 
+@media (max-width: 768px) {
+  .proj-grid { grid-template-columns: 1fr; }
+  .proj-card { transform: none !important; }
+}
