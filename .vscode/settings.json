@@ -25,6 +25,7 @@
         "se añade el estilo de los contactos",
         "Se le dan retoques a la secciones de retoques",
         "Paginas de scrapbook pegadas",
-        "Se le añden estilos al responsive y al pie de la pagina y unas cuantas animaciones"
+        "Se le añden estilos al responsive y al pie de la pagina y unas cuantas animaciones",
+        "se mueve el archivo footer animations a css, equivocacion"
     ]
 }
