@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Angel — Desarrollador Full Stack">
+  <title>Angel · Desarrollador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- ════ ESTILOS MODULARES ════ -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer-animations.css">
+</head>
+ 
+<body>
+ 
+  <!-- Hojas que caen sobre toda la página -->
+  <div class="leaf-ambient" id="leafAmbient" aria-hidden="true"></div>
+ 
+  <!-- Progreso de lectura -->
+  <div class="reading-progress" id="readingProgress"></div>
+ 
+ 
+  <!-- ══════════════════════════════════════════
+       ÍNDICE DE CAPÍTULOS (navegación tipo manga)
+  ══════════════════════════════════════════ -->
+  <nav class="m-nav" role="navigation" aria-label="Índice de capítulos">
+    <a class="m-item active" href="#hero" data-target="hero" aria-current="page">
+      <span class="m-cap">Cap. 01</span>
+      <span class="m-lbl">Inicio</span>
+      <span class="m-dot" aria-hidden="true"></span>
+    </a>
+    <a class="m-item" href="#about" data-target="about">
+      <span class="m-cap">Cap. 02</span>
+      <span class="m-lbl">Sobre mí</span>
+      <span class="m-dot" aria-hidden="true"></span>
+    </a>
+    <a class="m-item" href="#skills" data-target="skills">
+      <span class="m-cap">Cap. 03</span>
+      <span class="m-lbl">Skills</span>
+      <span class="m-dot" aria-hidden="true"></span>
+    </a>
+    <a class="m-item" href="#projects" data-target="projects">
+      <span class="m-cap">Cap. 04</span>
+      <span class="m-lbl">Proyectos</span>
+      <span class="m-dot" aria-hidden="true"></span>
+    </a>
+    <a class="m-item" href="#contact" data-target="contact">
+      <span class="m-cap">Cap. 05</span>
+      <span class="m-lbl">Contacto</span>
+      <span class="m-dot" aria-hidden="true"></span>
+    </a>
+  </nav>
+ 
+  <!-- Superposición de paso de página -->
+  <div class="pt-overlay" id="ptOverlay" aria-hidden="true">
+    <span class="pt-chapter-wrap">
+      <span class="pt-chapter-label">Capítulo</span>
+      <span class="pt-chapter-num" id="ptChapterNum"></span>
+    </span>
+  </div>
