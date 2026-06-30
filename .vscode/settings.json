@@ -9,6 +9,7 @@
         "Se añadio una nueva skill N8N al portafolio",
         "Se muestran los proyectos creados durante campusland",
         "Se muestra la demo del portafolio y como se trabajo en este mismo",
-        "Se añade una forma para poder contactarme por los medios introducidos dentro de la pagina"
+        "Se añade una forma para poder contactarme por los medios introducidos dentro de la pagina",
+        "Se añaden el pie de la pagina y tambien la modularizacion de todos los archivos"
     ]
 }
