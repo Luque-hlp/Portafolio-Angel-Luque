@@ -1,0 +1,67 @@
+/* ============================================
+   BASE — reset, tipografía de diario, papel
+============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+ 
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.75;
+}
+ 
+/* Grano de papel sobre toda la página */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+ 
+/* ============================================
+   BARRA DE PROGRESO DE LECTURA
+============================================ */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--amber));
+  z-index: 9997;
+  transition: width 0.12s linear;
+}
+ 
+/* ============================================
+   HOJAS AMBIENTALES — caen lentamente sobre toda la página
+============================================ */
+.leaf-ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+ 
+.la {
+  position: absolute;
+  opacity: 0;
+  animation: leafFall linear infinite;
+}
+ 
+@keyframes leafFall {
+  0%   { opacity: 0;           transform: translateY(-30px) translateX(0px) rotate(0deg); }
+  8%   { opacity: var(--op); }
+  48%  { transform: translateY(48vh)  translateX(var(--dA)) rotate(var(--rA)); }
+  92%  { opacity: var(--op); }
+  100% { opacity: 0;           transform: translateY(104vh) translateX(var(--dB)) rotate(var(--rB)); }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
