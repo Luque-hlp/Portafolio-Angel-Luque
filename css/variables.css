@@ -1,0 +1,26 @@
+/* ============================================
+   VARIABLES — paleta de bosque al atardecer
+   Solo tonos cálidos: beige, crema, verde bosque,
+   verde oliva, madera, dorado, amarillo atardecer.
+   Sin azules, sin morados, sin negro puro.
+============================================ */
+:root {
+  --bg:          #f7f2ea;
+  --bg-warm:     #efe8d8;
+  --bg-paper:    #e8dfc8;
+  --gold:        #b88520;
+  --sunset:      #c8902a;
+  --amber:       #d4a840;
+  --forest:      #4a5e36;
+  --olive:       #6a7a42;
+  --sage:        #8a9a6a;
+  --brown:       #7a5c38;
+  --wood:        #5a3820;
+  --warm-gray:   #9a8878;
+  --ink:         #2a2418;
+  --text:        #3a2e20;
+  --text-light:  #7a6850;
+  --nav-w:       86px;
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-slow:   cubic-bezier(0.4, 0, 0.2, 1);
+}
