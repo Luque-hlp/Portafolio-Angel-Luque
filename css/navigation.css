@@ -141,3 +141,56 @@ m-item {
   width: 1px;
   background: linear-gradient(180deg, transparent, rgba(184,133,32,0.22), transparent);
 }
+
+/* "Capítulo · 01" grande durante la transición */
+.pt-chapter-wrap {
+  position: absolute;
+  bottom: 13vh;
+  right: calc(var(--nav-w) + 7%);
+  text-align: right;
+}
+.pt-chapter-label {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(90,56,32,0.16);
+  margin-bottom: 4px;
+}
+.pt-chapter-num {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 118px;
+  font-weight: 300;
+  color: rgba(42, 36, 24, 0.07);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  user-select: none;
+}
+ 
+@media (max-width: 768px) {
+  :root { --nav-w: 0px; }
+  .m-nav {
+    width: 100%; height: 56px;
+    bottom: 0; top: auto;
+    flex-direction: row;
+    border-left: none;
+    border-top: 1px solid rgba(184,133,32,0.18);
+    justify-content: space-around;
+  }
+  .m-nav::after { display: none; }
+  .m-item {
+    flex-direction: column;
+    padding: 6px 8px;
+    border-bottom: none;
+    border-right: 1px solid rgba(184,133,32,0.1);
+    flex: 1; align-items: center; justify-content: center;
+  }
+  .m-item:last-child { border-right: none; }
+  .m-item .m-lbl { writing-mode: horizontal-tb; font-size: 7px; letter-spacing: 0.1em; }
+  .m-item::before { display: none; }
+  body { padding-bottom: 56px; }
+  .pt-chapter-wrap { display: none; }
+}
