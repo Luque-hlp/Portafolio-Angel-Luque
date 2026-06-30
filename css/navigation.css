@@ -1,0 +1,43 @@
+/* ============================================
+   NAVEGACIÓN — índice de capítulos de manga
+   Vertical, fija a la derecha. Cada sección es
+   un capítulo, no un link de navbar tradicional.
+============================================ */
+.m-nav {
+  position: fixed;
+  right: 0; top: 0;
+  height: 100vh;
+  width: var(--nav-w);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(247, 242, 234, 0.97);
+  border-left: 1px solid rgba(184, 133, 32, 0.2);
+}
+ 
+/* Líneas de manuscrito */
+.m-nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px, transparent 8px,
+    rgba(184,133,32,0.042) 8px, rgba(184,133,32,0.042) 9px
+  );
+}
+ 
+/* 章 — "capítulo" en la parte superior del índice */
+.m-nav::after {
+  content: '章';
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: rgba(184,133,32,0.38);
+  letter-spacing: 0.06em;
+}
