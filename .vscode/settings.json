@@ -29,6 +29,7 @@
         "se mueve el archivo footer animations a css, equivocacion",
         "Se añaden la funcionalidad a la pagina web",
         "transición de capítulo (page-turn)",
-        "Se mejora la profundidad del bosque la interpolacion y el contenido del hero"
+        "Se mejora la profundidad del bosque la interpolacion y el contenido del hero",
+        "Scroll lento y orgánico para el funcionamiento del portafolio"
     ]
 }
