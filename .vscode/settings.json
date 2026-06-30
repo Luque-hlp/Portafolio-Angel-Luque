@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "Creamos los indices de los capitulos",
-        "Trabajando en los layouts para las paginas de manga requeridas"
+        "Trabajando en los layouts para las paginas de manga requeridas",
+        "Se creo los divs para los pinos diseñados para el portafolio"
     ]
 }
