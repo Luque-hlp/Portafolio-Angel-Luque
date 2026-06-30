@@ -1,0 +1,74 @@
+/* ============================================
+   SECCIONES — base
+============================================ */
+.section {
+  position: relative;
+  padding: 118px 8% 118px 8%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+ 
+#about   { background: var(--bg-warm); }
+#skills  { background: var(--bg); }
+#projects{ background: var(--bg-warm); }
+#contact { background: var(--bg); }
+ 
+/* Hoja decorativa — Sobre mí, arriba a la derecha */
+#about::before {
+  content: '';
+  position: absolute;
+  top: 58px; right: calc(var(--nav-w) + 58px);
+  width: 84px; height: 84px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'%3E%3Cpath d='M42 8 Q70 22 66 58 Q42 74 18 56 Q10 24 42 8Z' fill='%234a5e36' opacity='0.08'/%3E%3Cpath d='M42 8 Q41 42 66 58' stroke='%234a5e36' stroke-width='1' fill='none' opacity='0.06'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+ 
+/* Rama decorativa — Habilidades, abajo a la izquierda */
+#skills::before {
+  content: '';
+  position: absolute;
+  bottom: 70px; left: 3%;
+  width: 120px; height: 70px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 70'%3E%3Cpath d='M0,60 Q40,20 80,30 Q100,35 120,10' stroke='%236a7a42' stroke-width='1.2' fill='none' opacity='0.12'/%3E%3Cpath d='M80,30 Q90,50 100,65' stroke='%236a7a42' stroke-width='1' fill='none' opacity='0.09'/%3E%3Ccircle cx='120' cy='10' r='4' fill='%236a7a42' opacity='0.1'/%3E%3Ccircle cx='100' cy='65' r='3' fill='%236a7a42' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+ 
+.s-inner {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-right: calc(var(--nav-w) + 2%);
+}
+ 
+.s-head { margin-bottom: 70px; }
+ 
+.s-cap {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+ 
+.s-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(42px, 5.8vw, 68px);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+}
+ 
+.s-line {
+  display: block;
+  width: 42px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-top: 20px;
+}
