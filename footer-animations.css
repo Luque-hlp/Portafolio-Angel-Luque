@@ -1,0 +1,68 @@
+/* ============================================
+   PIE DE PÁGINA
+============================================ */
+footer {
+  background: var(--ink);
+  text-align: center;
+  padding: 62px calc(var(--nav-w) + 8%) 62px 8%;
+  position: relative;
+  overflow: hidden;
+}
+ 
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 56px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 56' preserveAspectRatio='none'%3E%3Cpath d='M0,56 L0,38 Q50,22 80,38 Q110,52 130,28 Q150,8 168,32 Q186,52 204,24 Q220,2 240,28 Q258,50 280,36 Q318,18 358,42 Q390,58 420,28 Q448,6 476,32 Q504,54 544,18 Q572,0 604,28 Q636,52 666,36 Q704,18 734,42 Q766,60 804,24 Q832,4 862,32 Q892,54 920,28 Q950,6 980,36 Q1010,60 1042,32 Q1072,8 1102,36 Q1130,58 1158,28 Q1186,4 1216,32 Q1244,54 1274,28 Q1310,2 1350,32 Q1382,54 1440,36 L1440,56Z' fill='rgba(90,56,32,0.18)'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+ 
+.foot-phrase {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  color: rgba(247,242,234,0.68);
+  margin-bottom: 14px;
+}
+ 
+.foot-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(247,242,234,0.24);
+}
+ 
+/* ============================================
+   ANIMACIONES DE SCROLL — lentas, orgánicas
+============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s var(--ease-slow), transform 1s var(--ease-slow);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+ 
+.reveal:nth-child(1) { transition-delay: 0s; }
+.reveal:nth-child(2) { transition-delay: 0.10s; }
+.reveal:nth-child(3) { transition-delay: 0.20s; }
+.reveal:nth-child(4) { transition-delay: 0.30s; }
+.reveal:nth-child(5) { transition-delay: 0.40s; }
+.reveal:nth-child(6) { transition-delay: 0.50s; }
+.reveal:nth-child(7) { transition-delay: 0.60s; }
+.reveal:nth-child(8) { transition-delay: 0.70s; }
+ 
+.stamp-card.reveal:nth-child(1) { transition-delay: 0.00s; }
+.stamp-card.reveal:nth-child(2) { transition-delay: 0.08s; }
+.stamp-card.reveal:nth-child(3) { transition-delay: 0.16s; }
+.stamp-card.reveal:nth-child(4) { transition-delay: 0.24s; }
+.stamp-card.reveal:nth-child(5) { transition-delay: 0.32s; }
+.stamp-card.reveal:nth-child(6) { transition-delay: 0.40s; }
+.stamp-card.reveal:nth-child(7) { transition-delay: 0.48s; }
+.stamp-card.reveal:nth-child(8) { transition-delay: 0.56s; }
+ 
+/* ============================================
+   RESPONSIVE — generales
+============================================ */
+@media (max-width: 480px) {
+  .h-btns { flex-direction: column; }
+  .btn-p, .btn-s { justify-content: center; text-align: center; }
+}
