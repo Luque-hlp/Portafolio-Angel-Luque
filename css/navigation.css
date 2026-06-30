@@ -41,3 +41,66 @@
   color: rgba(184,133,32,0.38);
   letter-spacing: 0.06em;
 }
+
+m-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 6px 20px;
+  gap: 9px;
+  cursor: pointer;
+  color: var(--warm-gray);
+  transition: color 0.55s var(--ease);
+  border-bottom: 1px solid rgba(184,133,32,0.1);
+  text-decoration: none;
+  position: relative;
+}
+.m-item:last-child { border-bottom: none; }
+ 
+/* "CAP. 01" — etiqueta de capítulo, no número de página */
+.m-cap {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  opacity: 0.5;
+  transition: opacity 0.55s;
+  white-space: nowrap;
+}
+ 
+.m-lbl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Manrope', sans-serif;
+  font-size: 7.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  transition: color 0.55s;
+}
+ 
+.m-dot {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity 0.55s;
+  flex-shrink: 0;
+}
+ 
+.m-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16%; bottom: 16%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  transform: scaleY(0);
+  transition: transform 0.55s var(--ease);
+}
+ 
+.m-item.active, .m-item:hover  { color: var(--wood); }
+.m-item.active .m-cap,
+.m-item:hover .m-cap            { opacity: 1; }
+.m-item.active .m-dot           { opacity: 1; }
+.m-item.active::before          { transform: scaleY(1); }
+.m-item:hover::before           { transform: scaleY(0.55); }
