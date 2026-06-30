@@ -72,3 +72,89 @@
   background: linear-gradient(90deg, var(--gold), transparent);
   margin-top: 20px;
 }
+
+/* ============================================
+   SOBRE MÍ
+============================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 88px;
+  align-items: start;
+}
+ 
+.about-visual { position: relative; display: flex; justify-content: center; }
+ 
+.polaroid {
+  background: #faf6ee;
+  padding: 14px 14px 54px;
+  box-shadow:
+    7px 10px 34px rgba(42,36,24,0.14),
+    3px 4px 12px rgba(42,36,24,0.08),
+    0 0 0 1px rgba(200,180,140,0.14);
+  transform: rotate(-2.2deg);
+  width: 194px;
+  position: relative;
+}
+ 
+.polaroid::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%) rotate(-0.4deg);
+  width: 64px; height: 22px;
+  background: rgba(212,190,130,0.44);
+  border: 1px solid rgba(190,165,100,0.28);
+}
+ 
+.polaroid-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(ellipse at 35% 25%, rgba(218,172,65,0.72) 0%, transparent 55%),
+    radial-gradient(ellipse at 65% 70%, rgba(74,94,54,0.34) 0%, transparent 50%),
+    linear-gradient(155deg, #c8a878 0%, #9a7850 45%, #7a5c38 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+ 
+.polaroid-figure { width: 62%; opacity: 0.5; margin-bottom: -2px; }
+ 
+.polaroid-cap {
+  position: absolute;
+  bottom: 16px; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--warm-gray);
+  white-space: nowrap;
+}
+ 
+.deco-leaf { position: absolute; opacity: 0.15; }
+.deco-leaf-a { top: -30px; right: -24px; transform: rotate(32deg); }
+.deco-leaf-b { bottom: -18px; left: -28px; transform: rotate(-18deg); }
+ 
+.about-text p {
+  font-size: 15px;
+  line-height: 2.05;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+ 
+.about-text p:first-child {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.68;
+}
+ 
+.timeline {
+  margin-top: 50px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(184,133,32,0.22);
+}
+ 
